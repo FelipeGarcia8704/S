@@ -1,3 +1,5 @@
+# Usage
+
 ## Features
 
 For any item posted to Shaarli (called a _Shaare_), you can customize the following aspects:
@@ -21,6 +23,7 @@ While logged in to your Shaarli, you can add, edit or delete Shaares:
 
 The `Shaare a new link` dialog also allows you to create multiple bookmarks at once (unfold the `bulk creation` section and add one URL per line).
 
+
 ### Tags
 
 Tags can be be used to organize and categorize your Shaares:
@@ -37,9 +40,16 @@ Additional filter buttons can be found at the top left of the Shaare list **only
 - **Only show private Shaares:** Private shares can be searched by clicking the `only show private links` toggle button top left of the Shaares list (only when logged in)
 
 
+### Sticky Shaares
+
+Enabling the _Sticky_ mode on a Shaare will make it "stick" to the top of the Shaares list (first item of the first page), bypassing the normal sort order (most recent first). DIsabling the _Sticky_ mode will move back the Shaare to its initial position on the link list.
+
+Sticky-ing a Shaare does not bypass active filters/search terms.
+
+
 ### Permalinks
 
-Permalinks are fixed, short links attached to each Shaare. Editing a Shaare will not change it's permalink, each permalink always points to the latest revision of a Shaare.
+Permalinks are fixed, short links attached to each Shaare. Editing a Shaare will not change its permalink, each permalink always points to the latest revision of a Shaare.
 
 
 ### Text-only (note) Shaares
@@ -53,13 +63,15 @@ Shaarli can be used as a minimal blog, notepad, pastebin...: While adding or edi
 - **Tags search:** `Filter by tags` allow only displaying Shaares tagged with one or multiple tags (use space to separate tags). A plus sign `+` is optional and will restrict suggested tags to only those starting with the string (example: `pr` will hint `apron` and `printer` but `+pr` will only hint printer).
 - **Hidden tags:** tags starting with a dot `.` (example `.secret`) are private. They can only be seen and searched when logged in.
 - **Exclude text/tags:** Use the `-` operator before a word or tag to exclude Shaares matching this word from search results (`NOT` operator).
-- **Optional tags:** Use the `~` operator before multiple tags to search for any one of them (`OR` operator).
+- **Optional tags:** Use the `~` operator before multiple tags to search for any one of them (`OR` operator). Note that the OR operator only works if there are multiple tags with a tilde. A search for `webdesign ~ai ~youtube` search would match `webdesign AND (ai OR youtube)`. A search for `webdesign ~youtube` is equivalent to `+webdesign +youtube`.
 - **Wildcard tag search:** An asterisk (`*`) can be used as a wildcard and will match any number of characters. Wildcards can appear in the middle of a search term or at the end (example: pro\*in\* will match programming and protein).
 - **Untagged links:** Shaares without tags can be searched by clicking the `untagged` toggle button top left of the Shaares list (only when logged in).
 
 Both exclude patterns and exact searches can be combined with normal searches (example `"exact search" term otherterm -notthis "very exact" stuff -notagain`). Only AND (and NOT) text search is currently supported.
 
 Active search terms are displayed on top of the link list. To remove terms/tags from the current search, click the `x` next to any of them, or simply clear text/tag search fields.
+
+Shaarli's search can be added to your Web browser's search engines by clicking the `+` Shaarli icon in your browser's search engine selector ([example for Firefox](https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox#w_add-a-search-engine-from-the-search-bar)).
 
 
 ### Tag cloud
